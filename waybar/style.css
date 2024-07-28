@@ -1,0 +1,115 @@
+* {
+  font-family: "Noto Sans CJK SC", "Font Awesome 6 Free", sans-serif;
+  font-size: 12pt;
+  font-weight: 500;
+  text-shadow: none;
+  border-radius: 18px;
+}
+
+window#waybar {
+  background: #1E1E28;
+  color: #DADAE8;
+  border-radius: 0px;
+}
+
+#workspaces, #window, #battery, #cpu, #memory, #pulseaudio, #network, #clock, #tray, #language, #mpris {
+  background: #332E41;
+  color: #d6beff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#workspaces {
+  padding: 3px;
+  margin-left: 5px;
+}
+
+#workspaces :first-child {
+  margin-left: 0;
+}
+
+#workspaces button {
+  border: none;
+  padding: 0 8px;
+  background: transparent;
+  color: #d4b4ff;
+  margin-left: 3px;
+  padding: 2px 8px;
+}
+
+#workspaces button:hover {
+  background: #605470;
+}
+
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+#workspaces button.active {
+  background: #d6beff;
+  color: #1f1f1f;
+}
+
+#workspaces button.urgent {
+  background-color: #7f7097;
+}
+
+#clock {
+  padding: 2px 10px;
+  min-width: 130px;
+}
+
+#tray {
+  padding: 2px 10px;
+  min-width: 24px;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#memory,
+#cpu {
+  padding: 2px 10px;
+  border-radius: 0;
+  min-width: 70px;
+}
+
+#battery {
+  margin-right: 5px;
+  border-radius: 0px 15px 15px 0px;
+  min-width: 60px;
+}
+
+#network {
+  padding-right: 8px;
+  border-radius: 15px 0px 0px 15px;
+
+}
+
+tooltip {
+  background: #1E1E28;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #504761;
+}
+
+#language {
+  padding: 2px 10px;
+  min-width: 24px;
+}
+
+#mpris {
+  padding: 2px 10px;
+  min-width: 200px;
+}
+
+#mpris.playing {
+  background: #332E41;
+  color: #d6beff;
+}
+
+#mpris.paused {
+  background: #332E41;
+  color: #ff9595;
+}

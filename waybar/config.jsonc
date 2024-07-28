@@ -1,0 +1,148 @@
+[
+  {
+    "layer": "bottom",
+    "position": "top",
+    "height": 40,
+    "spacing": 4,
+    "modules-left": [
+      "custom/syslogo",
+      "hyprland/workspaces",
+      "tray",
+      "mpris"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "hyprland/language",
+      "network",
+      "pulseaudio",
+      "memory",
+      "cpu",
+      "battery"
+    ],
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "persistent-workspaces": {
+        "*": 5
+      },
+      "format-icons": {
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十"
+      }
+    },
+    "tray": {
+      "icon-size": 19,
+      "spacing": 10
+    },
+    "clock": {
+      "interval": 1,
+      "format": "\uf017 {:%I:%M:%S %p}",
+      "format-alt": "\uf133 {:%d.%m.%Y}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+        "mode": "year",
+        "mode-mon-col": 3,
+        "weeks-pos": "right",
+        "on-scroll": 1,
+        "format": {
+          "months": "<span color='#ffead3'><b>{}</b></span>",
+          "days": "<span color='#ecc6d9'><b>{}</b></span>",
+          "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+          "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+          "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+        }
+      },
+      "actions": {
+        "on-click-right": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    },
+    "cpu": {
+      "interval": 2,
+      "format": "\uf2db {usage}%",
+      "tooltip": true
+    },
+    "memory": {
+      "interval": 2,
+      "format": "\uf538 {used}G",
+      "tooltip": true,
+      "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
+    },
+    "network": {
+      "interval": 1,
+      "format-wifi": "\uf1eb {quality}%",
+      "format-ethernet": "\uef44 Wired",
+      "format-disconnected": "\uf071 RIP",
+      "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}"
+    },
+    "pulseaudio": {
+      "scroll-step": 5,
+      "format": "{icon} {volume}%",
+      "format-muted": "\uf6a9",
+      "format-icons": {
+        "default": [
+          "\uf026",
+          "\uf027",
+          "\uf028"
+        ]
+      },
+      "on-click-right": "pavucontrol",
+      "ignored-sinks": [
+        "AudioRelay Virtual Sink",
+        "Recorder Sink"
+      ]
+    },
+    "battery": {
+      "states": {
+        "good": 95,
+
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon} {capacity}%",
+      "format-full": "{icon} {capacity}%",
+      "format-charging": "\udb85\udc0b {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-icons": [
+        "\udb80\udc8e",
+        "\udb80\udc7a",
+        "\udb80\udc7b",
+        "\udb80\udc7c",
+        "\udb80\udc7d",
+        "\udb80\udc7e",
+        "\udb80\udc7f",
+        "\udb80\udc80",
+        "\udb80\udc81",
+        "\udb80\udc82",
+        "\udb80\udc79"
+      ],
+      "interval": 1
+    },
+    "hyprland/language": {
+      "format": "{shortDescription}"
+    },
+    "mpris": {
+      "format": "{player_icon} {title}",
+      "format-paused": "{status_icon} {title}",
+      "player-icons": {
+        "default": "\uf28b"
+      },
+      "status-icons": {
+        "paused": "\uf144"
+      },
+      "max-length": 20
+    }
+  }
+]
