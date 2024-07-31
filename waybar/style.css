@@ -12,7 +12,17 @@ window#waybar {
   border-radius: 0px;
 }
 
-#workspaces, #window, #battery, #cpu, #memory, #pulseaudio, #network, #clock, #tray, #language, #mpris {
+#workspaces,
+#window,
+#battery,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#clock,
+#tray,
+#language,
+#mpris {
   background: #332E41;
   color: #d6beff;
   margin-top: 5px;
@@ -47,7 +57,7 @@ window#waybar {
 
 #workspaces button.active {
   background: #d6beff;
-  color: #1f1f1f;
+  color: #1E1E28;
 }
 
 #workspaces button.urgent {
@@ -112,4 +122,19 @@ tooltip {
 #mpris.paused {
   background: #332E41;
   color: #ff9595;
+}
+
+#battery.charging {
+  background-color: #00ff00;
+  color: #1E1E28;
+}
+
+#battery.discharging.warning {
+  color: #1E1E28;
+  background: #ff8c00;
+}
+
+#battery.discharging.critical {
+  background: #ff2828;
+  color: #1E1E28;
 }

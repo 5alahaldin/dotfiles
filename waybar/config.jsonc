@@ -49,7 +49,7 @@
       "format-alt": "\uf133 {:%d.%m.%Y}",
       "tooltip-format": "<tt><small>{calendar}</small></tt>",
       "calendar": {
-        "mode": "year",
+        "mode": "month",
         "mode-mon-col": 3,
         "weeks-pos": "right",
         "on-scroll": 1,
@@ -63,8 +63,6 @@
       },
       "actions": {
         "on-click-right": "mode",
-        "on-click-forward": "tz_up",
-        "on-click-backward": "tz_down",
         "on-scroll-up": "shift_up",
         "on-scroll-down": "shift_down"
       }
@@ -98,18 +96,12 @@
           "\uf028"
         ]
       },
-      "on-click-right": "pavucontrol",
-      "ignored-sinks": [
-        "AudioRelay Virtual Sink",
-        "Recorder Sink"
-      ]
+      "on-click-right": "pavucontrol"
     },
     "battery": {
       "states": {
-        "good": 95,
-
         "warning": 30,
-        "critical": 15
+        "critical": 10
       },
       "format": "{icon} {capacity}%",
       "format-full": "{icon} {capacity}%",
