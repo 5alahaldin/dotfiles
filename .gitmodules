@@ -1,3 +1,5 @@
 [submodule "src/dwm"]
 	path = src/dwm
 	url = https://github.com/5alahaldin/dwm.git
+	branch = main
+
